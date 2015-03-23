@@ -27,6 +27,11 @@ class AllListViewController: UITableViewController, ListDetailViewControllerDele
             performSegueWithIdentifier("ShowChecklist", sender: checklist)
         }
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -44,12 +49,22 @@ class AllListViewController: UITableViewController, ListDetailViewControllerDele
         var cell: UITableViewCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? UITableViewCell
        
         if cell == nil {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
+            cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellIdentifier)
         }
         
         let checklist = dataModel.lists[indexPath.row]
         cell.textLabel?.text = checklist.name
         cell.accessoryType = .DetailDisclosureButton
+        
+        let count = checklist.countUncheckedItems()
+        
+        if checklist.items.count == 0 {
+            cell.detailTextLabel!.text = "(No items)"
+        } else if count == 0 {
+            cell.detailTextLabel!.text = "All done!"
+        } else {
+            cell.detailTextLabel!.text = "\(count) Remaining"
+        }
         
         return cell
     }

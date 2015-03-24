@@ -24,13 +24,18 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxO-GK-eP6">
-                                            <rect key="frame" x="35" y="10" width="490" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxO-GK-eP6">
+                                            <rect key="frame" x="40" y="11.5" width="493" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="IxO-GK-eP6" secondAttribute="trailing" id="0M7-al-olW"/>
+                                        <constraint firstAttribute="centerY" secondItem="IxO-GK-eP6" secondAttribute="centerY" id="Y09-VM-etJ"/>
+                                        <constraint firstItem="IxO-GK-eP6" firstAttribute="leading" secondItem="1ha-0l-5R3" secondAttribute="leading" constant="40" id="t92-ru-Nsg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="sH3-pI-htf" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="TKT-PZ-WIP"/>
@@ -70,8 +75,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tbs-IA-Y22" id="2cf-Cs-JUb">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the List" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcQ-dk-3Wk">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the List" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pcQ-dk-3Wk">
                                                     <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="JcD-UN-h64"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -80,6 +88,11 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pcQ-dk-3Wk" firstAttribute="top" secondItem="2cf-Cs-JUb" secondAttribute="top" constant="7" id="Js1-8q-95Y"/>
+                                                <constraint firstItem="pcQ-dk-3Wk" firstAttribute="leading" secondItem="2cf-Cs-JUb" secondAttribute="leading" constant="8" id="bTu-Yw-eiZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="pcQ-dk-3Wk" secondAttribute="trailing" constant="8" id="jPj-JQ-Kkf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -211,8 +224,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bQZ-Ve-5CL" id="hoZ-j9-k7U">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ZW-LS-dhq">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ZW-LS-dhq">
                                                     <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="P4n-qO-keg"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -221,6 +237,11 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3ZW-LS-dhq" firstAttribute="leading" secondItem="hoZ-j9-k7U" secondAttribute="leading" constant="8" id="0mD-Vd-8y7"/>
+                                                <constraint firstAttribute="trailing" secondItem="3ZW-LS-dhq" secondAttribute="trailing" constant="8" id="14b-jA-p8p"/>
+                                                <constraint firstItem="3ZW-LS-dhq" firstAttribute="top" secondItem="hoZ-j9-k7U" secondAttribute="top" constant="8" id="N5A-rH-HtO"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
